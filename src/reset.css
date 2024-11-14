@@ -1,0 +1,57 @@
+/* reset.css */
+
+/* Normaliza as margens, padding e bordas dos elementos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que as bordas e padding não alterem o tamanho dos elementos */
+}
+
+/* Remove a decoração das listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove o sublinhado de links */
+a {
+    text-decoration: none;
+    color: inherit; /* Deixa a cor do link com a cor do texto normal */
+}
+
+/* Define uma fonte base padrão para o app */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+
+/* Remove a formatação padrão de campos de formulário */
+input,
+textarea,
+select,
+button {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Adiciona um foco visual para os inputs ao serem selecionados */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 2px solid #007bff;
+}
+
+/* Remove o espaçamento entre as células de uma tabela */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .colaborador {
-    font-family: 'Montserrat', sans-serif;
     display: inline-block;
     width: 262px;
     height: 269px;
@@ -26,7 +24,7 @@
 .colaborador h4{
     color: #6278F7;
     font-size: 18px;
-    margin-top: 30%;
+    margin-top: 28%;
 }
 
 .colaborador h5{
@@ -34,5 +32,5 @@
     margin: 0 auto;
     width: 80%;
     font-weight: 100;
-    margin-top: -10px;
+    margin-top: 4px;
 }

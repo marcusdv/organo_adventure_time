@@ -2,9 +2,9 @@ import { useState } from 'react'
 import Banner from './components/Banner'
 import Formulario from './components/Formulario';
 import Time from './components/Time'
-import { colaboradoresData } from './data/dadosColaboradores';
 import { horaDeAventuraData } from './data/dadosHoraDeAventura';
 import { timesData } from './data/dadosTimes';
+import Rodape from './components/Rodape';
 
 function App() {
 
@@ -37,6 +37,7 @@ function App() {
         nomesDosTimes={timesData.map(time => time.nome)}
       />
       {geraTimes(timesData, colaboradores)}
+      <Rodape/>
     </div>
   );
 }

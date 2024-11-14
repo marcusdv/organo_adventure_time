@@ -3,7 +3,7 @@ import Colaborador from '../Colaborador';
 
 
 const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
-    
+
     const geraCartoes = (arrColaboradores, nomeTime, corPrimaria, corSecundaria) => {
         return arrColaboradores.filter(colaborador => colaborador.time === nomeTime)
             .map(({ nome, descricao, time, imagem }) => <Colaborador
@@ -20,7 +20,7 @@ const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
 
 
     return (
-        <section
+        colaboradores.length > 0 && <section
             className='time'
             style={{
                 backgroundColor: `${corSecundaria}`
