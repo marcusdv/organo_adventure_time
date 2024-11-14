@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import Banner from './components/Banner'
+import Formulario from './components/Formulario';
+import Time from './components/Time'
+import { colaboradoresData } from './data/dadosColaboradores';
+import { horaDeAventuraData } from './data/dadosHoraDeAventura';
+import { timesData } from './data/dadosTimes';
 
 function App() {
+
+  const [colaboradores, setColaboradores] = useState(horaDeAventuraData)
+
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    setColaboradores([...colaboradores, colaborador])
+  }
+
+
+  const geraTimes = (arrTime, arrColaboradores) => {
+    return arrTime.map(time => <Time
+      key={time.nome}
+      imagem={time.imagem}
+      nome={time.nome}
+      corPrimaria={time.corPrimaria}
+      corSecundaria={time.corSecundaria}
+      colaboradores={arrColaboradores}
+    >
+    </Time>
+    )
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Banner />
+      <Formulario
+        aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
+        nomesDosTimes={timesData.map(time => time.nome)}
+      />
+      {geraTimes(timesData, colaboradores)}
     </div>
   );
 }
